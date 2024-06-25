@@ -1,0 +1,572 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    /* overflow: hidden; */
+}
+
+body {
+    font-family: 'Verdana', Geneva, sans-serif;
+    transition: all ease 0.5s;
+    position: relative;
+}
+
+nav {
+    min-width: 100%;
+    padding: 20px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.logo h2 {
+    color: orange;
+    padding: 3px;
+}
+
+.logo {
+    border: 1px solid blue;
+    border-radius: 10px;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+ul li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+ul li a {
+    text-decoration: none;
+    color: blue;
+}
+
+li i {
+    font-size: 28px;
+    color: blue;
+    transition: all ease 0.5s;
+}
+
+.mode {
+    border: 2px solid blue;
+    height: 31px;
+    width: 70px;
+    border-radius: 30px;
+    background-color: #fff;
+    transition: all ease 0.5s;
+}
+
+.night img {
+    width: 28px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    transition: all ease 0.5s;
+    cursor: pointer;
+}
+
+.night {
+    display: flex;
+    align-items: center;
+    position: relative;
+    transition: all ease 0.5s;
+}
+
+.hero {
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    background: linear-gradient(to bottom, #f0f0f0, #dcdcdc);
+    margin-top: 30px;
+}
+
+.col {
+    flex-basis: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.col img {
+    width: 100%;
+}
+
+.info {
+    height: 30rem;
+    width: 70%;
+    background-color: #fff;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.col2 img {
+    width: 200px;
+    position: absolute;
+    top: -38px;
+    right: -8rem;
+}
+
+.top {
+    height: 50%;
+    width: 100%;
+}
+
+.bottom {
+    height: 50%;
+    width: 100%;
+    text-align: center;
+}
+
+.bottom img {
+    width: 70%;
+    position: inherit;
+    object-fit: cover;
+}
+
+
+.top h2 {
+    color: blue;
+    margin-top: 30px;
+    font-size: 2rem;
+}
+
+.top {
+    padding: 0 40px;
+}
+
+.animated-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    min-width: 280px;
+    color: blue;
+    margin-block: 20px;
+}
+
+.animated-text span {
+    position: relative;
+}
+
+.animated-text span::before {
+    content: "Mobiles's";
+    color: orange;
+    animation: words 20s infinite;
+}
+
+.animated-text span::after {
+    content: "";
+    position: absolute;
+    width: calc(100% + 8px);
+    width: 10px;
+    height: 100%;
+    background-color: white;
+    border-left: 2px solid orange;
+    right: -8px;
+    animation: cursor .8s infinite, typing 20s steps(10) infinite;
+}
+
+@keyframes cursor {
+    to {
+        border-left: 2px solid black;
+    }
+}
+
+@keyframes words {
+
+    0%,
+    20% {
+        content: "Mobile's";
+    }
+
+    21%,
+    40% {
+        content: "TV's";
+    }
+
+    41%,
+    60% {
+        content: "DTH";
+    }
+
+    61%,
+    80% {
+        content: "Cards";
+    }
+
+    81%,
+    100% {
+        content: "Toll";
+    }
+}
+
+@keyframes typing {
+
+    10%,
+    15%,
+    30%,
+    35%,
+    50%,
+    55%,
+    70%,
+    75%,
+    90% {
+        width: 0;
+    }
+
+    5%,
+    20%,
+    25%,
+    40%,
+    45%,
+    60%,
+    65%,
+    80%,
+    85% {
+        width: calc(100% + 8px);
+    }
+}
+
+.top p {
+    font-size: 15px;
+    line-height: 1.5rem;
+}
+
+.message-box {
+    position: relative;
+    width: 200px;
+    padding: 20px;
+    margin: 40px;
+    border-radius: 5px;
+    background-color: white;
+    /* Blue */
+    color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgb(200, 194, 194);
+    display: none;
+}
+
+.message-box::before {
+    content: "";
+    position: absolute;
+    top: -19px;
+    /* Adjust this value to control the arrow position */
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent blue transparent;
+}
+
+.message {
+    position: absolute;
+    top: 50px;
+    left: 290px;
+    transition: all ease 0.5s;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.option img {
+    width: 30px;
+    border-radius: 50%;
+}
+
+.option h4 {
+    color: blue;
+}
+
+.opt2 {
+    margin-block: 10px;
+}
+
+i {
+    cursor: pointer;
+}
+
+.bar {
+    display: none;
+}
+
+.option:hover {
+    background-color: rgb(245, 237, 237);
+    border-radius: 5px;
+
+    img {
+        mix-blend-mode: multiply;
+    }
+}
+
+.res-nav{
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .navbar {
+        display: none;
+    }
+
+    .bar {
+        display: inline;
+        font-size: 28px;
+        transition: all ease 0.5s;
+    }
+
+    .close-bar{
+        font-size: 28px;  
+    }
+
+    .navbar2 li {
+        display: none;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        padding: 20px 10px;
+        min-height: 100vh;
+        width: 100%;
+    }
+
+    .col2 {
+        min-width: 500px;
+        padding: inherit;
+        flex-direction: column;
+    }
+
+    .col2 .info {
+        height: 300px;
+    }
+
+    .col2 p {
+        display: none;
+    }
+
+    .bottom {
+        flex-basis: 90%;
+    }
+
+    .col2 h2 {
+        font-size: 1.5rem;
+    }
+
+    .col2 .animated-text {
+        font-size: 1.2rem;
+    }
+
+    .img2 {
+        display: none;
+    }
+
+    nav {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .navbar2 {
+        display: flex;
+        gap: 5px;
+    }
+    .res-nav{
+        position: absolute;
+        width: 300px;
+        height: 88vh;
+        background: white;
+        z-index: 10;
+        top: 80px;
+        right: -300px;
+        transition: all ease 0.5s;
+        border: 1px solid rgb(217, 210, 210);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+}
+.recharge-box{
+    padding: 3% 10%;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to bottom, #eee, #eee);
+    margin-top: 20px;
+}
+.box{
+   flex-basis: 50%;
+}
+.box h1{
+    margin-block: 40px;
+    line-height: 1.2;
+    color: blue;
+}
+.box h2{
+    color: blue;
+}
+.box p{
+    font-size: 20px;
+    color: gray;
+}
+button{
+    margin-top: 40px;
+    padding: 15px 30px;
+    background-color: rgb(244, 183, 71);
+    color: blue;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 22px;
+}
+button i{
+    font-size: 22px;
+}
+.dth-box{
+    width: 500px;
+    height: 70vh;
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
+    padding: 40px 50px;
+}
+.box2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+label{
+    margin-top: 30px;
+}
+.part1{
+    margin-top: 30px;
+}
+.part1 label{
+    font-size: 14px;
+    color: blue;
+}
+.part1 select{
+    width: 100%;
+    height: 2.9rem;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 5px;
+    border: none;
+    border: 1px solid rgb(194, 189, 189);
+}
+select:focus{
+    outline: none;
+}
+select:hover{
+    border: 2px solid blue;
+}
+.part2 label{
+    font-size: 14px;
+    color: blue;
+}
+.part2 input{
+    width: 100%;
+    height: 2.9rem;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 5px;
+    border: none;
+    border: 1px solid rgb(194, 189, 189);
+}
+.part3 input{  
+    width: 100%;
+    height: 2.9rem;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 5px;
+    border: none;
+    border: 1px solid rgb(194, 189, 189);
+
+}
+input:hover{
+    border: 2px solid blue;
+}
+.part4{
+    margin-top: 20px;
+}
+.part4 a{
+    text-decoration: none;
+    padding: 15px 168px;
+    background-color: orange;
+    border-radius: 5px;
+}
+.part3 label{
+    font-size: 14px;
+    color: blue;
+}
+.part3 input:hover{
+    border: 2px solid blue;
+}
+a{
+    text-decoration: none;
+}
+.electricity-box{
+    max-height: 400px;
+    
+}
+.recharge2{
+    padding-block: 80px;
+}
+
+.op{
+    gap: 20px;
+}
+
+.msg-box2{
+    position: relative;
+    width: 280px;
+    padding: 30px 20px;
+    margin: 40px;
+    border-radius: 5px;
+    background-color: white;
+    /* Blue */
+    color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgb(200, 194, 194);
+    display: none;
+}
+
+.msg-box2::before {
+    content: "";
+    position: absolute;
+    top: -19px;
+    /* Adjust this value to control the arrow position */
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent blue transparent;
+}
+
+.message2 {
+    position: absolute;
+    top: 50px;
+    left: 390px;
+    transition: all ease 0.5s;
+}
+.op{
+    justify-content: left;
+}
